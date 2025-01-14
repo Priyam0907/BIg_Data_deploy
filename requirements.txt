@@ -4,5 +4,6 @@ scipy==1.13.1
 transformers==4.47.1
 numpy==1.26.4
 scikit-learn==1.5.1
-
+torch==2.5.1
+torchvision==0.20.1
 pandas==2.2.2
