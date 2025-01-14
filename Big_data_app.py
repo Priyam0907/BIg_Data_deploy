@@ -12,10 +12,10 @@ st.set_page_config(page_title="SOCIAL MEDIA", page_icon="📊", layout="wide")
 
 def calculate_sentiment(text):
     # Load the tokenizer, config, and model
+    tokenizer = AutoTokenizer.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment-latest")
+    model = AutoModelForSequenceClassification.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment-latest")
+    config = AutoConfig.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment-latest")
     
-    tokenizer = AutoTokenizer.from_pretrained("tokenizer")
-    config = AutoConfig.from_pretrained("best_model")
-    model = AutoModelForSequenceClassification.from_pretrained("best_model")
 
     # Tokenize input text
     encoded_input = tokenizer(text, return_tensors='pt')
